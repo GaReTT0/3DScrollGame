@@ -1,0 +1,41 @@
+# 3DScrollGame
+## 環境
+- Windows10
+- Unity(2020.3.7f1)
+
+## ディレクトリ
+- Images
+    - ゲームで使用するImage素材が含まれる。
+- Music
+    - ゲームで使用される曲(Song)やSEが含まれる。
+- Prefabs
+    - Unity上で使用されるPrefabが含まれる。
+- Scripts
+    - Unityで使用されるすべてのScriptが含まれる。
+## コード
+- assets/Scripts/BreakBlock.cs
+  - ステージのブロックオブジェクトがパーティクルに当たった際に破壊される処理を行う。
+- assets/Scripts/ButtonManager.cs
+  - ボタンをクリックした際に引数によって指定のゲームシーンに遷移する。
+- assets/Scripts/CameraRotate.cs
+  - カメラがプレイヤーを追従するように処理を行う。
+- assets/Scripts/Character.cs
+  - PlayerクラスとEnemyクラスの親クラス
+- assets/Scripts/Dragon.cs
+  - Playerが一定範囲内に入った際にGameClearとなる処理を行う。
+- assets/Scripts/Enemy.cs
+  - enumによってEnemyの状態を管理し、Enemyのアニメーションを再生する。また、Playerが近づくまでは一定距離を左右に動き、Playerが一定距離内に入った際にPlayerを追跡する。
+- assets/Scripts/GameManager.cs
+  - シングルトンのクラス。ゲームで扱うほとんどの変数をもたせている。また、ゲームクリア判定やスコア計算、SE再生を行う。
+- assets/Scripts/Item.cs
+  - PortionクラスとMagicScrollクラスの親クラス
+- assets/Scripts/MagicScroll.cs
+  - Playerが取得した際に攻撃手段とジャンプ力を上げるスキルを解放する処理を行う。
+- assets/Scripts/ParticleManager.cs
+  - パーティクルの再生が終了した際にオブジェクトを破壊する
+- assets/Scripts/Player.cs
+  - enumによってPlayerの状態を管理し、Playerのアニメーションを再生する。また、入力したキーによって移動やジャンプ、攻撃を行う。
+- assets/Scripts/Portion.cs
+  - Playerが取得した際にPlayerのHPを回復する。取得した際にPlayerのHPが最大HPである場合はHPを回復しない。
+- assets/Scripts/StageGimmick.cs
+  - BreakBlockクラスの親クラス 
